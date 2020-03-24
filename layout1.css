@@ -1,0 +1,147 @@
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "main sideBar";
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 20vh 80vh;
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 600;
+  box-sizing: border-box;
+  padding-left: 20%;
+  margin-bottom: 1%;
+}
+
+.header > #logo {
+  font-weight: 900;
+  font-size: 1.5rem;
+  height: auto;
+  width: auto;
+  position: absolute;
+  left: 2%;
+}
+
+.header > #menu1 {
+  height: auto;
+  width: auto;
+  border: 1px solid red;
+  padding: 10px;
+  position: absolute;
+  left: 35%;
+  background-color: burlywood;
+}
+
+.header > #menu2 {
+  height: auto;
+  width: auto;
+  border: 1px solid red;
+  padding: 10px;
+  position: absolute;
+  left: 45%;
+  background-color: burlywood;
+}
+
+.header > #menu3 {
+  height: auto;
+  width: auto;
+  border: 1px solid red;
+  padding: 10px;
+  position: absolute;
+  left: 55%;
+  background-color: burlywood;
+}
+
+.header > #menu4 {
+  height: auto;
+  width: auto;
+  border: 1px solid red;
+  padding: 10px;
+  position: absolute;
+  left: 65%;
+  background-color: burlywood;
+}
+
+.header > #profile {
+  height: auto;
+  width: auto;
+  border: 1px solid red;
+  padding: 10px;
+  position: absolute;
+  left: 85%;
+  background-color: burlywood;
+}
+
+.header > #displayPic {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  border: 1px solid red;
+  padding: 10px;
+  position: absolute;
+  left: 95%;
+  background-color: burlywood;
+}
+
+.main {
+  grid-area: main;
+  background-color: rgb(194, 186, 186);
+  margin-left: 10vw;
+  position: relative;
+}
+
+.main > .back-btn {
+  width: auto;
+  padding: 20px;
+  border: 1px solid rgb(96, 92, 92);
+  position: absolute;
+  top: 3%;
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 800;
+  position: absolute;
+  top: 5%;
+}
+.main > .back-btn > i {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 5px;
+}
+
+.leftArrow {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+.sideBar {
+  grid-area: sideBar;
+  background-color: rgb(194, 190, 188);
+  margin-right: 10vw;
+  position: relative;
+}
+
+.sideBar > .contactNo {
+  font-family: "Nanum Gothic", sans-serif;
+  position: absolute;
+  right: 0;
+  top: 5%;
+}
+
+.sideBar > .contactNo > span {
+  font-weight: 800;
+}
+
+.grid-container .header {
+  /* background-color: rgb(189, 178, 178); */
+  height: 20vh;
+  width: 80vw;
+  margin-left: 10vw;
+  justify-items: center;
+  box-sizing: border-box;
+}
