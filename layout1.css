@@ -3,8 +3,17 @@
   grid-template-areas:
     "header header"
     "main sideBar";
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1.7fr 1fr;
   grid-template-rows: 20vh 80vh;
+}
+
+.grid-container .header {
+  /* background-color: rgb(189, 178, 178); */
+  height: 20vh;
+  width: 80vw;
+  margin-left: 10vw;
+  justify-items: center;
+  box-sizing: border-box;
 }
 
 .header {
@@ -32,67 +41,74 @@
 .header > #menu1 {
   height: auto;
   width: auto;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   padding: 10px;
   position: absolute;
   left: 35%;
-  background-color: burlywood;
+  /* background-color: burlywood; */
 }
 
 .header > #menu2 {
   height: auto;
   width: auto;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   padding: 10px;
   position: absolute;
   left: 45%;
-  background-color: burlywood;
+  /* background-color: burlywood; */
 }
 
 .header > #menu3 {
   height: auto;
   width: auto;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   padding: 10px;
   position: absolute;
   left: 55%;
-  background-color: burlywood;
+  /* background-color: burlywood; */
 }
 
 .header > #menu4 {
   height: auto;
   width: auto;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   padding: 10px;
   position: absolute;
   left: 65%;
-  background-color: burlywood;
+  /* background-color: burlywood; */
 }
 
 .header > #profile {
   height: auto;
   width: auto;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   padding: 10px;
   position: absolute;
   left: 85%;
-  background-color: burlywood;
+  /* background-color: burlywood; */
 }
 
 .header > #displayPic {
   height: 1rem;
   width: 1rem;
-  border-radius: 50%;
-  border: 1px solid red;
+
+  /* border: 1px solid red; */
   padding: 10px;
   position: absolute;
+  top: 10%;
   left: 95%;
-  background-color: burlywood;
+  /* background-color: burlywood; */
+}
+
+.header > #displayPic > img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
 }
 
 .main {
   grid-area: main;
-  background-color: rgb(194, 186, 186);
+  /* background-color: rgb(194, 186, 186); */
   margin-left: 10vw;
   position: relative;
 }
@@ -100,6 +116,7 @@
 .main > .back-btn {
   width: auto;
   padding: 20px;
+  background-color: white;
   border: 1px solid rgb(96, 92, 92);
   position: absolute;
   top: 3%;
@@ -107,6 +124,7 @@
   font-weight: 800;
   position: absolute;
   top: 5%;
+  cursor: pointer;
 }
 .main > .back-btn > i {
   border: solid black;
@@ -119,6 +137,151 @@
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
 }
+
+.dish1 {
+  position: absolute;
+  top: 15rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.dish1 > img {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 5px;
+  background-color: aquamarine;
+}
+
+.dish1 > .about {
+  position: absolute;
+  /* background-color: bisque; */
+  left: 25%;
+  font-family: "Nanum Gothic", sans-serif;
+  color: rgb(42, 45, 45);
+}
+
+.dish1 > .about > h3 {
+  color: rgb(144, 152, 159);
+}
+
+.dish1 > .price {
+  position: absolute;
+  /* background-color: bisque; */
+  left: 50%;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+.dish1 > .delete {
+  position: absolute;
+  /* background-color: bisque; */
+  left: 75%;
+  cursor: pointer;
+}
+
+.dish1 > .delete > img {
+  height: 10%;
+  width: 10%;
+}
+
+.dish2 {
+  position: absolute;
+  top: 25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.dish2 > img {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 5px;
+  background-color: aquamarine;
+}
+
+.dish2 > .about {
+  position: absolute;
+  /* background-color: bisque; */
+  left: 25%;
+  font-family: "Nanum Gothic", sans-serif;
+  color: rgb(42, 45, 45);
+}
+
+.dish2 > .about > h3 {
+  color: rgb(144, 152, 159);
+}
+
+.dish2 > .price {
+  position: absolute;
+  /* background-color: bisque; */
+  left: 50%;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+.dish2 > .delete {
+  position: absolute;
+  /* background-color: bisque; */
+  left: 75%;
+  cursor: pointer;
+}
+
+.dish2 > .delete > img {
+  height: 10%;
+  width: 10%;
+}
+
+.dish3 {
+  position: absolute;
+  top: 35rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.dish3 > img {
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  border-radius: 5px;
+  background-color: aquamarine;
+}
+
+.dish3 > .about {
+  position: absolute;
+  /* background-color: bisque; */
+  left: 25%;
+  font-family: "Nanum Gothic", sans-serif;
+  color: rgb(42, 45, 45);
+}
+
+.dish3 > .about > h3 {
+  color: rgb(144, 152, 159);
+}
+
+.dish3 > .price {
+  position: absolute;
+  /* background-color: bisque; */
+  left: 50%;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+.dish3 > .delete {
+  position: absolute;
+  /* background-color: bisque; */
+  left: 75%;
+  cursor: pointer;
+}
+
+.dish3 > .delete > img {
+  height: 10%;
+  width: 10%;
+}
+
 .sideBar {
   grid-area: sideBar;
   background-color: rgb(194, 190, 188);
@@ -130,18 +293,78 @@
   font-family: "Nanum Gothic", sans-serif;
   position: absolute;
   right: 0;
-  top: 5%;
+  top: 15%;
 }
 
 .sideBar > .contactNo > span {
   font-weight: 800;
 }
 
-.grid-container .header {
-  /* background-color: rgb(189, 178, 178); */
-  height: 20vh;
-  width: 80vw;
-  margin-left: 10vw;
-  justify-items: center;
+#bill {
+  background-color: #f5f5f7;
+  height: 60vh;
+  position: absolute;
+  top: 20%;
+  width: 100%;
+}
+
+#bill #logo {
+  left: calc(50% - 25px);
+  position: absolute;
+  top: 10%;
+}
+
+#bill > #textContainer {
+  display: flex;
+  justify-content: center;
+}
+
+#bill > #textContainer > h3 {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 200;
+  font-size: 1.8rem;
+  color: rgb(68, 57, 57);
+  position: absolute;
+  top: 16%;
+}
+
+#separator1 {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid rgb(235, 227, 227);
+  position: absolute;
+  top: 30%;
+}
+
+#bill > #promoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  font-family: "Nanum Gothic", sans-serif;
+  top: 35%;
+  position: absolute;
   box-sizing: border-box;
+}
+
+#bill > #promoContainer > #promoCode {
+  padding: 20px;
+  font-size: 1rem;
+  height: 1rem;
+}
+
+#bill > #promoContainer > #count {
+  background-color: rgb(31, 29, 29);
+  color: white;
+  font-size: 1rem;
+  padding: 20px;
+  border: none;
+}
+
+#separator2 {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid rgb(235, 227, 227);
+  position: absolute;
+  top: 50%;
 }
