@@ -106,6 +106,9 @@
   border-radius: 50%;
 }
 
+hr {
+  background-color: rgb(233, 221, 221);
+}
 .main {
   grid-area: main;
   /* background-color: rgb(194, 186, 186); */
@@ -284,7 +287,7 @@
 
 .sideBar {
   grid-area: sideBar;
-  background-color: rgb(194, 190, 188);
+  /* background-color: rgb(194, 190, 188); */
   margin-right: 10vw;
   position: relative;
 }
@@ -306,6 +309,7 @@
   position: absolute;
   top: 20%;
   width: 100%;
+  border-radius: 10px;
 }
 
 #bill #logo {
@@ -330,7 +334,8 @@
 
 #separator1 {
   display: block;
-  width: 100%;
+  width: 90%;
+  left: 5%;
   border-bottom: 1px solid rgb(235, 227, 227);
   position: absolute;
   top: 30%;
@@ -363,8 +368,81 @@
 
 #separator2 {
   display: block;
-  width: 100%;
+  width: 90%;
+  left: 5%;
   border-bottom: 1px solid rgb(235, 227, 227);
   position: absolute;
   top: 50%;
+}
+
+#bill > #orderCostContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 900;
+  color: rgb(32, 31, 31);
+  top: 55%;
+}
+
+#bill > #orderCostContainer > #orderPrice > span {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+#bill > #deliveryContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+  position: absolute;
+  color: rgb(144, 139, 139);
+  top: 62%;
+}
+
+#separator3 {
+  display: block;
+  width: 90%;
+  left: 5%;
+  border-bottom: 1px solid rgb(235, 227, 227);
+  position: absolute;
+  top: 70%;
+}
+
+#bill > #totalPriceContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+  position: absolute;
+  color: rgb(32, 31, 31);
+  top: 75%;
+}
+
+#bill > #totalPriceContainer > #totalPrice > span {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+#bill > #checkoutButtonContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 85%;
+}
+
+#bill > #checkoutButtonContainer > #checkoutBtn {
+  background-color: rgb(36, 34, 34);
+  padding: 20px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 1rem;
+  width: 200px;
 }
