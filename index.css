@@ -151,8 +151,7 @@ hr {
 }
 
 .dish1 > img {
-  width: 150px;
-  height: 150px;
+  width: 20%;
   position: absolute;
   border-radius: 5px;
   background-color: aquamarine;
@@ -199,8 +198,7 @@ hr {
 }
 
 .dish2 > img {
-  width: 150px;
-  height: 150px;
+  width: 20%;
   position: absolute;
   border-radius: 5px;
   background-color: aquamarine;
@@ -247,8 +245,7 @@ hr {
 }
 
 .dish3 > img {
-  height: 150px;
-  width: 150px;
+  width: 20%;
   position: absolute;
   border-radius: 5px;
   background-color: aquamarine;
@@ -310,12 +307,30 @@ hr {
   top: 20%;
   width: 100%;
   border-radius: 10px;
+  display: grid;
+  grid-template-areas:
+    "orderLogo"
+    "promoCode"
+    "orderCost"
+    "deliveryContainer"
+    "totalCost"
+    "checkout";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 0.4fr 0.7fr 1fr 0.8fr;
 }
 
 #bill #logo {
-  left: calc(50% - 25px);
-  position: absolute;
-  top: 10%;
+  grid-area: orderLogo;
+  display: grid;
+  justify-content: center;
+}
+
+#logo img {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  left: 50px;
+  top: 5px;
 }
 
 #bill > #textContainer {
@@ -323,13 +338,13 @@ hr {
   justify-content: center;
 }
 
-#bill > #textContainer > h3 {
+#bill > #logo > #textContainer > h3 {
   font-family: "Nanum Gothic", sans-serif;
   font-weight: 200;
   font-size: 1.8rem;
   color: rgb(68, 57, 57);
-  position: absolute;
-  top: 16%;
+  /* position: absolute; */
+  /* top: 16%; */
 }
 
 #separator1 {
@@ -342,27 +357,25 @@ hr {
 }
 
 #bill > #promoContainer {
+  grid-area: promoCode;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   width: 100%;
   font-family: "Nanum Gothic", sans-serif;
-  top: 35%;
-  position: absolute;
+  /* top: 35%;
+  position: absolute; */
   box-sizing: border-box;
 }
 
 #bill > #promoContainer > #promoCode {
   padding: 20px;
-  font-size: 1rem;
-  height: 1rem;
 }
 
 #bill > #promoContainer > #count {
-  background-color: rgb(31, 29, 29);
-  color: white;
-  font-size: 1rem;
   padding: 20px;
+  color: white;
+  background-color: black;
   border: none;
 }
 
@@ -376,14 +389,15 @@ hr {
 }
 
 #bill > #orderCostContainer {
+  grid-area: orderCost;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  position: absolute;
+  /* position: absolute; */
   font-family: "Nanum Gothic", sans-serif;
   font-weight: 900;
   color: rgb(32, 31, 31);
-  top: 55%;
+  /* top: 55%; */
 }
 
 #bill > #orderCostContainer > #orderPrice > span {
@@ -392,14 +406,15 @@ hr {
 }
 
 #bill > #deliveryContainer {
+  grid-area: deliveryContainer;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   font-family: "Nanum Gothic", sans-serif;
   font-weight: 400;
-  position: absolute;
+  /* position: absolute; */
   color: rgb(144, 139, 139);
-  top: 62%;
+  /* top: 62%; */
 }
 
 #separator3 {
@@ -412,14 +427,15 @@ hr {
 }
 
 #bill > #totalPriceContainer {
+  grid-area: totalCost;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   font-family: "Nanum Gothic", sans-serif;
   font-weight: 400;
-  position: absolute;
+  /* position: absolute; */
   color: rgb(32, 31, 31);
-  top: 75%;
+  /* top: 75%; */
 }
 
 #bill > #totalPriceContainer > #totalPrice > span {
@@ -428,12 +444,13 @@ hr {
 }
 
 #bill > #checkoutButtonContainer {
+  grid-area: checkout;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 85%;
+  /* position: absolute;
+  top: 85%; */
 }
 
 #bill > #checkoutButtonContainer > #checkoutBtn {
